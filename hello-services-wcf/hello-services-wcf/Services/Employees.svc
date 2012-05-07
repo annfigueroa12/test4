@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Factory="System.ServiceModel.Activation.WebServiceHostFactory" Service="hello_services_wcf.Services.Employees" %>
