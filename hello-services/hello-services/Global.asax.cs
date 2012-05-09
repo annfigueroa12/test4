@@ -11,7 +11,12 @@ namespace hello_services {
 
         void Application_Start(object sender, EventArgs e) {
 
+            // initialize the default route configuration
             RouteTable.Routes.SetDefaultHttpConfiguration(new Microsoft.ApplicationServer.Http.WebApiConfiguration() { });
+            
+            // define the route to the emlpoyees service.  the path
+            // is relative and can be access at http://localhost:1234/api/employees or
+            // whatever your root URL is
             RouteTable.Routes.MapServiceRoute<Services.Employees>("Api/Employees");
 
         }
