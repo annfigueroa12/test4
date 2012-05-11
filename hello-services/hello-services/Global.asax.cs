@@ -5,19 +5,18 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Routing;
+using System.Web.Http;
 
 namespace hello_services {
     public class Global : System.Web.HttpApplication {
 
         void Application_Start(object sender, EventArgs e) {
 
-            // initialize the default route configuration
-            RouteTable.Routes.SetDefaultHttpConfiguration(new Microsoft.ApplicationServer.Http.WebApiConfiguration() { });
-            
-            // define the route to the emlpoyees service.  the path
-            // is relative and can be access at http://localhost:1234/api/employees or
-            // whatever your root URL is
-            RouteTable.Routes.MapServiceRoute<Services.Employees>("Api/Employees");
+            // initialize default routes
+            RouteTable.Routes.MapHttpRoute(
+                  name: "DefaultApi",
+                  routeTemplate: "api/{controller}/{id}",
+                  defaults: new { id = System.Web.Http.RouteParameter.Optional });
 
         }
 
