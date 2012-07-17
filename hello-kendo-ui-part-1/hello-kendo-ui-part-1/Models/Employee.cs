@@ -11,12 +11,5 @@ namespace hello_kendo_ui_part_1.Models {
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public Employee(Data.Employee employee) {
-
-            this.Id = employee.EmployeeID;
-            this.FirstName = employee.FirstName;
-            this.LastName = employee.LastName;
-        
-        }
     }
 }
