@@ -90,7 +90,7 @@ namespace hello_kendo_ui.Data
 		
 		private string _TitleOfCourtesy;
 		
-		private System.Nullable<System.DateTime> _BirthDate;
+		private System.DateTime _BirthDate;
 		
 		private System.Nullable<System.DateTime> _HireDate;
 		
@@ -134,7 +134,7 @@ namespace hello_kendo_ui.Data
     partial void OnTitleChanged();
     partial void OnTitleOfCourtesyChanging(string value);
     partial void OnTitleOfCourtesyChanged();
-    partial void OnBirthDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnBirthDateChanging(System.DateTime value);
     partial void OnBirthDateChanged();
     partial void OnHireDateChanging(System.Nullable<System.DateTime> value);
     partial void OnHireDateChanged();
@@ -270,7 +270,7 @@ namespace hello_kendo_ui.Data
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BirthDate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> BirthDate
+		public System.DateTime BirthDate
 		{
 			get
 			{

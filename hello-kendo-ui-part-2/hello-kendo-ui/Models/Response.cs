@@ -10,10 +10,19 @@ namespace hello_kendo_ui.Models {
 
         public Array Data { get; set; }
         public int Count { get; set; }
+        public string Errors { get; set; }
 
         public Response(Array data, int count) {
             this.Data = data;
             this.Count = count;
+        }
+
+        public Response(string errors) {
+            this.Errors = errors;
+        }
+
+        public Response() {
+
         }
     }
 }
