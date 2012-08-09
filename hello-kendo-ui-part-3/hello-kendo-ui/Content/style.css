@@ -1,0 +1,27 @@
+﻿body 
+{
+    width: 100%
+}
+
+.upper
+{
+    margin: auto;
+    width: 800px;
+}
+
+.lower 
+{
+    overflow: hidden;
+}
+
+.lower-left: 
+{
+    width: 380px;
+    float: left;
+}
+
+.lower-right:
+{
+    width: 380px;
+    float: right;
+}

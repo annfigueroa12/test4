@@ -4,7 +4,7 @@
 <head>
     <title></title>
     <link href="Content/kendo/2012.2.710/kendo.common.min.css" rel="stylesheet" type="text/css" />
-    <link href="Content/kendo/2012.2.710/kendo.default.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/kendo/2012.2.710/kendo.metro.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -22,6 +22,7 @@
             var grid = $("#employeesGrid").kendoGrid({
                 // specify the columns on the grid
                 columns: [
+                        { title: "", template: "<input type='checkbox' />" },
                         { field: "FirstName", title: "First Name" },
                         { field: "LastName", title: "Last Name" },
                         "Title",
@@ -100,7 +101,8 @@
                 // paging is enabled in the grid
                 pageable: true,
                 // editing happens inline, one row at a time.
-                editable: "inline"
+                editable: "inline",
+                groupable: true
             }).data("kendoGrid");
 
         });
